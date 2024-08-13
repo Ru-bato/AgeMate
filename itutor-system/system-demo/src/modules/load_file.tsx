@@ -52,12 +52,12 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileUpload }) => {
 
   return (
     <div>
-      <input
+      { <input
         type="file"
         ref={fileInputRef}
         style={{ display: "none" }}
         onChange={handleFileChange}
-      />
+      /> }
       <Button onClick={handleUploadClick}>Upload <UploadOutlined /></Button>
       {fileName && <p>Uploaded file: {fileName}</p>}{" "}
       {/* Display the file name */}

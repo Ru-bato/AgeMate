@@ -7,19 +7,27 @@ const { Content } = Layout;
 
 export default class ConceptVideo extends React.Component {
   render() {
+    const CONTENT = {
+      english: (
+        <div>
+          For a more immersive understanding, please view our demo video
+          showcasing AgeMate's capabilities.
+        </div>
+      ),
+      chinese: (
+        <div>"这是我们的DEMO视频，如果你想更加深入地了解我们，来看吧！"</div>
+      ),
+    };
+
     return (
       <div>
         <Content style={{ padding: "10px 10px 10px 10px" }}>
-          <Title
+          {/* <Title
             level={3}
             style={{ textAlign: "center", justifyContent: "center" }}
           >
-            <b>Concept Video</b>
-          </Title>
-
-          <Paragraph style={{fontSize: "10px", textAlign: "center"}}>
-            Available in Chinese as a support material for C4-HCI competition.
-          </Paragraph>
+            <b>Demo Video</b>
+          </Title> */}
 
           <Row
             style={{
@@ -39,6 +47,10 @@ export default class ConceptVideo extends React.Component {
               title="concept-video"
             ></iframe>
           </Row>
+
+          <Paragraph style={{ fontSize: "16px", textAlign: "center" }}>
+            {CONTENT[this.props.language]}
+          </Paragraph>
         </Content>
       </div>
     );

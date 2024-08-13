@@ -49,6 +49,7 @@ EXPLORABLE_FILES = [
 import os
 import shutil
 
+
 def copy_files(source_dir, target_dir, prefixes, extension):
     """
     Copy files from source_dir to target_dir with the given prefixes and extension.
@@ -58,13 +59,13 @@ def copy_files(source_dir, target_dir, prefixes, extension):
         # join prefix with extension
         file = prefix + extension
         files.append(file)
-    
-        
+
     for file in files:
         source_path = os.path.join(source_dir, file)
         target_path = os.path.join(target_dir, file)
         shutil.copyfile(source_path, target_path)
 
+# 这个路径需要新建
 if __name__ == "__main__":
     source_dir = "E:/Data(E)/Datasets/Enrico/"
     script_src_dir = "D:/Research/HCI/iTutor-base"
@@ -74,4 +75,3 @@ if __name__ == "__main__":
 
     copy_files(source_dir + "hierarchies", script_src_dir + hierarchies_dir, EXPLORABLE_FILES, ".json")
     copy_files(source_dir + "screenshots", script_src_dir + screen_shot_dir, EXPLORABLE_FILES, ".jpg")
-

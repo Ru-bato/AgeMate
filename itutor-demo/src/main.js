@@ -3,7 +3,7 @@ import { Layout, ConfigProvider, Dropdown, Space } from "antd";
 import { Button } from "antd";
 import {
   GithubOutlined,
-  FilePdfOutlined,
+  LinkOutlined,
   DownOutlined,
   TranslationOutlined,
 } from "@ant-design/icons";
@@ -12,6 +12,10 @@ import Introduction from "./modules/introduction.js";
 import Demonstration from "./modules/demonstration.js";
 import Explanation from "./modules/explanation.js";
 import ConceptVideo from "./modules/concept-video.js";
+import StepDemo from "./modules/step-demo.js";
+import TechnicalImplementation from "./modules/technical-implementation.js";
+import KeyTechnologies from "./modules/key-technologies.js";
+import Showcase from "./modules/showcase.js";
 
 const { Title, Paragraph, Text } = Typography;
 const { Header, Footer, Content } = Layout;
@@ -59,8 +63,8 @@ class GlobalLayout extends React.Component {
   render() {
     const content = {
       english:
-        "A Generative Tutorial System for Teaching the Elders to Use Smartphone Applications",
-      chinese: "老年人智能手机使用“引路人”",
+        "Elderly Smartphone Assistant Based on Large Models – Sunset Manufacturing Team",
+      chinese: "教老年人学会智能手机，我们最擅长的事！",
     };
 
     const items = [
@@ -90,7 +94,7 @@ class GlobalLayout extends React.Component {
           <Header style={defaultHeaderFooterStyle}>
             <Title level={1} style={{ color: "#ffffff" }}>
               <i>
-                <b>iTutor</b>
+                <b>AgeMate</b>
               </i>
             </Title>
             <Title level={3} style={{ color: "#ffffff" }}>
@@ -105,7 +109,7 @@ class GlobalLayout extends React.Component {
                 padding: "0 0 10px 0",
               }}
             >
-              Ruishi Zou, Zi Ye, Chen Ye
+              Liangliang Chan, Yongzhen Mu, Xiyan Huang, Ruogu Lang
               <br />
               Tongji University, Shanghai, China
             </Title>
@@ -139,7 +143,7 @@ class GlobalLayout extends React.Component {
             </Paragraph>
             <Button
               type="primary"
-              href="https://github.com/Motion115/iTutor/"
+              href="https://github.com/Ru-bato/AgeMate"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -149,29 +153,37 @@ class GlobalLayout extends React.Component {
             &nbsp;&nbsp;
             <Button
               type="primary"
-              href="https://doi.org/10.1145/3586182.3616663"
-              target="_blank"
+              href="#step-demo"
+              target="_self"
               rel="noopener noreferrer"
             >
-              <FilePdfOutlined />
-              Paper
+              <LinkOutlined />
+              Demo
             </Button>
             <br />
           </Header>
 
           <Content style={defaultContentStyle}>
+            <ConceptVideo language={this.state.language} />
+
             <Introduction language={this.state.language} />
+
+            <StepDemo language={this.state.language} />
+
+            <TechnicalImplementation language={this.state.language} />
+
+            <KeyTechnologies language={this.state.language} />
+
+            <Showcase language={this.state.language} />
 
             <Demonstration language={this.state.language} />
 
             <Explanation language={this.state.language} />
-
-            <ConceptVideo />
           </Content>
 
           <Footer style={defaultHeaderFooterStyle}>
             <Paragraph style={{ color: "#ffffff" }}>
-              Created by TJHCI-X ©2023 with{" "}
+              Created by <b>Sunset Manufacturing Team</b> ©2024 with{" "}
               <a
                 href="https://ant.design/"
                 target="_blank"
@@ -181,8 +193,8 @@ class GlobalLayout extends React.Component {
               </a>
             </Paragraph>
             <Text style={{ color: "#ffffff" }}>
-              Special thanks to <b>Liangliang Chen</b> and <b>Ruiyi Liu</b> for
-              their assistance and participation in this project.
+              Special thanks to <b>Haotian Zhang</b> for his significant
+              participation and contribution to this project.
             </Text>
           </Footer>
         </Layout>

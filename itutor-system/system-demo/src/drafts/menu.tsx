@@ -8,7 +8,7 @@ const items: MenuProps["items"] = [
     label: (
       <a href={baseServerAddress + "/"}>
         <div style={{ fontSize: "22px" }}>
-          <b>iTutor | GLM</b>
+          <b>TutorProV | GLM</b>
         </div>
       </a>
     ),

@@ -1,6 +1,9 @@
+import os
+
+
 def assemble_screen_question_answering_prompt(ui_spec, question):
     question_answering_prompt = [
-    {"role": "user", "content": f"""\
+        {"role": "user", "content": f"""\
      Given a mobile screen, the hierarchies presented in JSON, \
      and a user question, provide the answer based on the screen information.\
 
@@ -15,9 +18,10 @@ def assemble_screen_question_answering_prompt(ui_spec, question):
     ]
     return question_answering_prompt
 
+
 def assemble_instruction_generation_prompt(ui_spec, question):
     instruction_to_action_prompt = [
-    {"role": "user", "content": f"""\
+        {"role": "user", "content": f"""\
      Your task is to act like a tutor, where you need to instruct a user how to \
      operate a given application and explain what this operation does. \
      The explanation should be around 50 words, and no longer than 100 words. \
@@ -45,9 +49,10 @@ def assemble_instruction_generation_prompt(ui_spec, question):
     ]
     return instruction_to_action_prompt
 
+
 def assemble_screen_summary_prompt(ui_spec):
     screen_summary_prompt = [
-    {"role": "user", "content": f"""
+        {"role": "user", "content": f"""
         Given a screen, the hierarchies presented in JSON, and summarize its purpose.
         Note that you do not need to provide the details of the hierarchies. Reply in less than 50 words.
         Screen:
@@ -56,7 +61,10 @@ def assemble_screen_summary_prompt(ui_spec):
     ]
     return screen_summary_prompt
 
+
 import numpy as np
+
+
 def cosine_similarity(a, b):
     a = np.asarray(a, dtype=np.float64)
     b = np.asarray(b, dtype=np.float64)
@@ -64,13 +72,20 @@ def cosine_similarity(a, b):
 
 
 import zhipuai
-from scripts.utils.api_key import API_KEY
+from .utils.api_key import API_KEY
+
 zhipuai.api_key = API_KEY
 
+
 def classify_prompt(prompt):
+    # client = zhipuai.ZhipuAI(api_key="fdcff2af29abb27f4a3bf90fbdbdaef2.wq74VMrxPNbXxrhh")
+    # response = client.chat.completions.create(
+    #     model="text_embedding",
+    #     messages=prompt
+    # )
     response = zhipuai.model_api.invoke(
-    model="text_embedding",
-    prompt=prompt
+        model="text_embedding",
+        prompt=prompt
     )
     if "data" not in response:
         return "Failed"
@@ -92,13 +107,22 @@ def classify_prompt(prompt):
     sim_list = list(sim_dict.keys())
     return sim_list[0]
 
+
 def call_zhipu_api(prompt):
+    # client = zhipuai.ZhipuAI(api_key="fdcff2af29abb27f4a3bf90fbdbdaef2.wq74VMrxPNbXxrhh")
+    # response = client.chat.completions.create(
+    #     model="chatglm_std",
+    #     # prompt= instruction_to_action_prompt,
+    #     messages=prompt,
+    #     temperature=0.3,
+    #     top_p=0.8,
+    # )
     response = zhipuai.model_api.sse_invoke(
         model="chatglm_std",
         # prompt= instruction_to_action_prompt,
-        prompt = prompt,
-        temperature= 0.3,
-        top_p= 0.8,
+        prompt=prompt,
+        temperature=0.3,
+        top_p=0.8,
         incremental=True
     )
 
@@ -117,4 +141,5 @@ def call_zhipu_api(prompt):
         else:
             response_from_llm += event.data
             # print(event.data, end="")
+    # return response.choices[0].message
     return response_from_llm

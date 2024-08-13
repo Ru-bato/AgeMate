@@ -4,12 +4,14 @@ from anytree import Node, RenderTree
 from anytree.exporter import DotExporter
 from anytree.exporter import DictExporter
 
+
 def del_key_entry(key, dict):
     if key in dict:
         del dict[key]
 
+
 class MetadataRetrieval:
-    def __init__(self, src_file, from_file = True):
+    def __init__(self, src_file, from_file=True):
         if from_file == True:
             self.src_file = src_file
             self.raw_data = self.load_json(src_file)
@@ -17,12 +19,12 @@ class MetadataRetrieval:
             self.src_file = ""
             self.raw_data = src_file
         self.construct_tree()
-    
+
     def load_json(self, src_file):
         with open(src_file, 'r') as f:
             data = json.load(f)
         return data
-    
+
     def format_node_spec(self, dict):
         # if children, resource-id, ancestors, class exists, strip it
         del_key_entry("resource-id", dict)
@@ -32,7 +34,7 @@ class MetadataRetrieval:
         # if componentLabel not in the spec, then add it
         if "componentLabel" not in dict:
             dict["componentLabel"] = "FullPage"
-    
+
     def construct_tree(self):
         nodes_list = []
         current_index = 0
@@ -47,7 +49,7 @@ class MetadataRetrieval:
             if "children" in node:
                 for children in node["children"]:
                     if children not in visited:
-                        if "parent_id" not in children:  
+                        if "parent_id" not in children:
                             # self.register_node(deepcopy(children))      
                             children["parent_id"] = current_index
                         visited.append(children)
@@ -70,7 +72,7 @@ class MetadataRetrieval:
             # delete all that's extracted
             del node["node_id"], node["componentLabel"]
             # node_id, with attributes UI_type, semantics and alternate_text
-            NodeList.append(Node(node_id, UI_type=comp_label, semantics=text, alternate_text=alt_text, attr=node ))
+            NodeList.append(Node(node_id, UI_type=comp_label, semantics=text, alternate_text=alt_text, attr=node))
 
         self.root = NodeList[0]
         for node in NodeList:
@@ -78,7 +80,7 @@ class MetadataRetrieval:
                 for x in NodeList:
                     if x.name == node.attr["parent_id"]:
                         node.parent = x
-        
+
         # # traverse AnyNodeList, the actual root will be [0]
         # self.root = AnyNodeList[0]
         # for node in AnyNodeList:
@@ -102,7 +104,7 @@ class MetadataRetrieval:
         filtered_attrs = []
         for key, value in attrs:
             if value != None and value != "" and value != "-":
-                if key != "attr": # and key != "name":
+                if key != "attr":  # and key != "name":
                     filtered_attrs.append((key, value))
         return filtered_attrs
 
@@ -114,7 +116,7 @@ class MetadataRetrieval:
         # to file
         with open("./test.json", "w") as f:
             f.write(out_json)
-    
+
     def export_json_string(self):
         exporter = DictExporter(
             attriter=self._export_filter)
@@ -122,10 +124,10 @@ class MetadataRetrieval:
         out_json = json.dumps(out_json)
         return out_json
 
+
 if __name__ == "__main__":
     src_file = "./data/hierarchies/1709.json"
     mr = MetadataRetrieval(src_file)
     # mr.construct_tree()
     # mr.show_tree()
     mr.export_json()
-    

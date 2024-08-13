@@ -5,25 +5,30 @@ import { Layout, Image } from "antd";
 const { Title, Paragraph } = Typography;
 const { Content } = Layout;
 
-export default class InformationRetrievalModule extends React.Component {
+export default class StepDemo extends React.Component {
   render() {
     const CONTENT = {
       english: (
         <div>
-          We present iTutor, a generative tutorial system for promoting
-          smartphone use proficiency among elders. iTutor is unique because it
-          can dynamically generate tutorials based on current operation goals
-          and UI context, which we achieved through leveraging prompt
-          engineering to large language models (LLMs). Our evaluations showed
-          potential for this approach, as we yielded 78.6% accuracy in the
-          instruction generation process.
+          Welcome to AgeMate! AgeMate is an application specifically designed
+          for the elderly, addressing the widening digital divide amidst the
+          aging society and supported by national policies promoting the
+          accessibility of internet applications for the elderly. By integrating
+          AI agents, leveraging reinforcement learning, and utilizing
+          interactive feedback detection technology, we aim to create a product
+          that seamlessly adapts to the needs of today's seniors, empowering
+          them to master smartphone applications and contributing to the
+          effective resolution of the aging issue.
         </div>
       ),
       chinese: (
         <div>
-          iTutor是一种结合了大语言模型技术的教程生成系统，用于为老年人提供基于情景的手机使用教程和相关支持，
-          以提高老年人使用手机的熟练程度。iTutor的动态教程生成能力是通过大模型实现的。大模型会基于当前的操作目标和UI状态
-          给出操作建议。我们的实验中，在使用ChatGPT的大模型时，我们得到了78.6%的下一步操作准确率。
+          欢迎来到AgeMate！
+          AgeMate是一款基于当今社会老龄化程度加大、数字鸿沟问题显著的社会背景，
+          响应国家互联网应用适老化改造的政策支持，从而打造的专门为老年人群提供智能手机助手服务的应用程序。
+          我们与AI智能体融合；我们用强化学习技术以及交互反馈检测技术助力；
+          通过大模型与前端技术的结合，我们希望生产一款更加适配当今老年人需求的产品，
+          决心帮助老人真正学会手机应用软件的使用和操作，助力国家老龄化问题的有效解决。
         </div>
       ),
     };
@@ -35,8 +40,12 @@ export default class InformationRetrievalModule extends React.Component {
             level={3}
             style={{ textAlign: "center", justifyContent: "center" }}
           >
-            Welcome to <b>iTutor</b>
+            <b>Abstract</b>
           </Title>
+
+          <Paragraph style={{ fontSize: "16px" }}>
+            {CONTENT[this.props.language]}
+          </Paragraph>
 
           <Image
             src={teaser_pic}
@@ -48,10 +57,6 @@ export default class InformationRetrievalModule extends React.Component {
             }}
             preview={false}
           />
-
-          <Paragraph style={{ fontSize: "16px" }}>
-            {CONTENT[this.props.language]}
-          </Paragraph>
         </Content>
       </div>
     );

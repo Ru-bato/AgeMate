@@ -37,16 +37,6 @@ const App: React.FC = () => (
         </Header>
         <Routing></Routing>
         <Footer>
-          <Text>
-            Theme by{" "}
-            <a
-              href="https://github.com/Motion115/minimal-academic-folio/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Motion115.
-            </a>
-          </Text>
         </Footer>
       </Layout>
     </Space>

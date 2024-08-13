@@ -57,14 +57,15 @@ screen_summary_prompt = [
     """}
 ]
 
-from utils.api_key import API_KEY
+from api_key import API_KEY
+
 zhipuai.api_key = API_KEY
 response = zhipuai.model_api.sse_invoke(
     model="chatglm_std",
     # prompt= instruction_to_action_prompt,
-    prompt = screen_summary_prompt,
-    temperature= 0.3,
-    top_p= 0.6,
+    prompt=screen_summary_prompt,
+    temperature=0.3,
+    top_p=0.6,
     incremental=True
 )
 

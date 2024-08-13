@@ -1,11 +1,16 @@
-from scripts.utils_metadata import MetadataRetrieval
-from scripts.utils_instruction_generation import assemble_instruction_generation_prompt, assemble_screen_question_answering_prompt, assemble_screen_summary_prompt, call_zhipu_api, classify_prompt
+# from scripts import utils_metadata
+# from scripts import utils_instruction_generation
+from .utils_metadata import MetadataRetrieval
+from .utils_instruction_generation import assemble_instruction_generation_prompt, \
+    assemble_screen_question_answering_prompt, assemble_screen_summary_prompt, call_zhipu_api, classify_prompt
 import json
+
 
 def treeify_enrico_json(json_data):
     metadata = MetadataRetrieval(json_data, from_file=False)
     # print(metadata.export_json_string())
     return metadata.export_json_string()
+
 
 def casify_and_call_response(json_data):
     if json_data["isTutorial"] == True:
@@ -47,6 +52,5 @@ def casify_and_call_response(json_data):
             _ = json.loads(llm_suggestion)
         except json.decoder.JSONDecodeError as e:
             return "Failed", llm_suggestion
-            
-    return prompt_type, llm_suggestion
 
+    return prompt_type, llm_suggestion
