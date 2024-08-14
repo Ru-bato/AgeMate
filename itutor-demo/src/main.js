@@ -10,12 +10,12 @@ import {
 import { Typography } from "antd";
 import Introduction from "./modules/introduction.js";
 import Demonstration from "./modules/demonstration.js";
-import Explanation from "./modules/explanation.js";
 import ConceptVideo from "./modules/concept-video.js";
 import StepDemo from "./modules/step-demo.js";
 import TechnicalImplementation from "./modules/technical-implementation.js";
 import KeyTechnologies from "./modules/key-technologies.js";
 import Showcase from "./modules/showcase.js";
+import age_logo from "./assets/age-logo.mp4";
 
 const { Title, Paragraph, Text } = Typography;
 const { Header, Footer, Content } = Layout;
@@ -73,8 +73,7 @@ class GlobalLayout extends React.Component {
 
   render() {
     const content = {
-      english:
-        "Sunset Manufacturing Team",
+      english: "Sunset Manufacturing Team",
       chinese: "夕阳红制造队",
     };
 
@@ -103,13 +102,33 @@ class GlobalLayout extends React.Component {
       >
         <Layout>
           <Header style={defaultHeaderFooterStyle}>
-            <Title level={1} style={{ color: "#000000" }}>
-              <i>
-                <b>AGEMATE: Elderly Smartphone Assistant
-                <br /> 
-                  Based on Large Models</b>
-              </i>
-            </Title>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <video
+                src={age_logo}
+                alt="Logo"
+                style={{ width: "190px", height: "110px" , marginRight: "0px", marginLeft: "-200px"}}
+                autoPlay
+                loop
+                muted
+              />
+              <div>
+                <Title level={1} style={{ color: "#000000" }}>
+                  <i>
+                    <b>
+                      AGEMATE: Elderly Smartphone Assistant
+                      <br />
+                      Based on Large Models
+                    </b>
+                  </i>
+                </Title>
+              </div>
+            </div>
             <Title level={3} style={{ color: "#4d89f0" }}>
               {content[this.state.language]}
               <br />
@@ -190,8 +209,6 @@ class GlobalLayout extends React.Component {
             <Showcase language={this.state.language} />
 
             <Demonstration language={this.state.language} />
-
-            <Explanation language={this.state.language} />
           </Content>
 
           <Footer style={defaultTailFooterStyle}>

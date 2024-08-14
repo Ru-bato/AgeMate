@@ -2,6 +2,7 @@ import React from "react";
 import { LeftCircleOutlined, RightCircleOutlined } from "@ant-design/icons";
 import { Typography, Steps, Button, Radio, Space } from "antd";
 import { Layout, Row, Col, Select } from "antd";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 // Import all the images here
 import ImageReader from "./demonstration-submodules/image-reader";
 // Import all the prompt here
@@ -160,10 +161,9 @@ export default class Demonstration extends React.Component {
       case 1:
         return (
           <div>
-              <Text>
-                <MarkdownReader display_id={display_id} />
-              </Text>
-
+            <Text>
+              <MarkdownReader display_id={display_id} />
+            </Text>
           </div>
         );
       case 2:
@@ -171,9 +171,7 @@ export default class Demonstration extends React.Component {
           <div>
             <Row gutter={[16, 16]}>
               <Col span={12}>
-                <JsonReader
-                  display_id={display_id}
-                />
+                <JsonReader display_id={display_id} />
               </Col>
               <Col span={12}>
                 <ImageReader image_referer={this.state.command_state} />
@@ -188,13 +186,15 @@ export default class Demonstration extends React.Component {
 
   render() {
     const CONTENT = {
-      english: "This is a demonstration of iTutor's dataflow. You can follow the steps to try out this static demo.",
-      chinese: "以下是iTutor系统按数据流的展示。您可以按照步骤条提示尝试此静态演示。",
-    }
+      english:
+        "This is a demonstration of AgeMate's dataflow. You can follow the steps to try out this static demo.",
+      chinese:
+        "以下是AgeMate系统按数据流的展示。您可以按照步骤条提示尝试此静态演示。",
+    };
 
     return (
       <div>
-        <Content style={{ padding: "10px 10px 10px 10px" }}>
+        <Content style={{ padding: "10px 10px 10px 10px", minHeight: "500px"}}>
           <Title
             level={3}
             style={{ textAlign: "center", justifyContent: "center" }}
@@ -209,6 +209,7 @@ export default class Demonstration extends React.Component {
           <Steps
             current={this.state.current_progress}
             items={progressBarContent}
+            onChange={(current) => this.setState({ current_progress: current })}
           />
 
           <br />
@@ -233,7 +234,15 @@ export default class Demonstration extends React.Component {
 
           <br />
 
-          {this.conditionalRender()}
+          <TransitionGroup className="transition-wrapper">
+            <CSSTransition
+              key={this.state.current_progress}
+              timeout={1}
+              classNames="fade"
+            >
+              {this.conditionalRender()}
+            </CSSTransition>
+          </TransitionGroup>
         </Content>
       </div>
     );

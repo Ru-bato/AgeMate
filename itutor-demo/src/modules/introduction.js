@@ -47,7 +47,7 @@ export default class StepDemo extends React.Component {
             {CONTENT[this.props.language]}
           </Paragraph>
 
-          <Image
+          {/* <Image
             src={teaser_pic}
             style={{
               width: "98%",
@@ -56,7 +56,7 @@ export default class StepDemo extends React.Component {
               margin: "auto",
             }}
             preview={false}
-          />
+          /> */}
         </Content>
       </div>
     );
