@@ -23,7 +23,11 @@ export default class TechnicalImplementation extends React.Component {
   render() {
     const CONTENT = {
       english: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           Our overall architecture comprises four layers: System Service Layer,
           Software Service Layer, Interaction Technology Layer, and Interaction
           Application Layer. These layers collectively enable core
@@ -139,7 +143,7 @@ export default class TechnicalImplementation extends React.Component {
           <Image
             src={arch_pic}
             style={{
-              width: "98%",
+              width: "80%",
               height: "auto",
               display: "block",
               margin: "auto",

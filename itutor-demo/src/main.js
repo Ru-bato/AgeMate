@@ -112,7 +112,7 @@ class GlobalLayout extends React.Component {
               <video
                 src={age_logo}
                 alt="Logo"
-                style={{ width: "190px", height: "110px" , marginRight: "0px", marginLeft: "-200px"}}
+                style={{ width: "100px", height: "190px" , marginRight: "15px", marginLeft: "-60px"}}
                 autoPlay
                 loop
                 muted

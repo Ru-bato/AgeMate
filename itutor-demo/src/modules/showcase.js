@@ -9,7 +9,11 @@ export default class Showcase extends React.Component {
   render() {
     const CONTENT_1 = {
       english: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           Dynamic Adjustment: AgeMate observes seniors' facial expressions and
           inquires about confusion, adjusting tutorials accordingly.
         </div>
@@ -22,14 +26,22 @@ export default class Showcase extends React.Component {
     };
     const CONTENT_2 = {
       english: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           Upon understanding seniors' needs, AgeMate swiftly generates tailored
           guides, using cartoonish voices to guide them through smartphone
           operations step-by-step.
         </div>
       ),
       chinese: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           通过了解老年人的需求之后，AgeMate可以快速地做出对策，并生成指南。我们用卡通的形象语音引导老年人一步一步的学习手机软件操作使用。
         </div>
       ),

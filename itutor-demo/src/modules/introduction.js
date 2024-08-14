@@ -9,7 +9,11 @@ export default class StepDemo extends React.Component {
   render() {
     const CONTENT = {
       english: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           Welcome to AgeMate! AgeMate is an application specifically designed
           for the elderly, addressing the widening digital divide amidst the
           aging society and supported by national policies promoting the

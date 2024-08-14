@@ -11,7 +11,11 @@ export default class InformationRetrievalModule extends React.Component {
   render() {
     const CONTENT = {
       english: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           AgeMate offers user-friendly operations and intelligent interactions,
           providing an interactive teaching software that enables seniors to
           quickly grasp smartphone usage. Through the seamless integration of
@@ -69,7 +73,7 @@ export default class InformationRetrievalModule extends React.Component {
           <Image
             src={step_pic}
             style={{
-              width: "98%",
+              width: "85%",
               height: "auto",
               display: "block",
               margin: "auto",
@@ -85,7 +89,7 @@ export default class InformationRetrievalModule extends React.Component {
             src={agemate_demo}
             alt="agemate_demo"
             style={{
-              width: "98%",
+              width: "70%",
               height: "auto",
               display: "block",
               margin: "auto",
@@ -103,9 +107,10 @@ export default class InformationRetrievalModule extends React.Component {
             src={appagent_demo}
             alt="appagent_demo"
             style={{
-              width: "98%",
-              height: "auto",
-              margin: "auto",
+              width: "50%",          // 控制视频宽度为父容器宽度的 50%
+              height: "auto",        // 自动调整高度以保持宽高比
+              display: 'block',      // 将视频设置为块级元素
+              margin: '0 auto',      // 自动水平居中
             }}
             autoPlay
             loop

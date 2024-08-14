@@ -26,7 +26,11 @@ export default class KeyTechnologies extends React.Component {
         // <div>
         //   Our overall architecture comprises four layers: System Service Layer, Software Service Layer, Interaction Technology Layer, and Interaction Application Layer. These layers collectively enable core functionalities, including<p></p>
         <div>
-          <div>
+          <div style={{
+            maxWidth: '700px',    // 限制最大宽度
+            margin: '0 auto',     // 自动水平居中
+            textAlign: 'justify', // 两端对齐
+          }}>
             <b
               onClick={() => this.toggleSection("voiceInteraction")}
               style={{ cursor: "pointer" }}
@@ -44,7 +48,11 @@ export default class KeyTechnologies extends React.Component {
               </p>
             )}
           </div>
-          <div>
+          <div style={{
+            maxWidth: '700px',    // 限制最大宽度
+            margin: '0 auto',     // 自动水平居中
+            textAlign: 'justify', // 两端对齐
+          }}>
             <b
               onClick={() => this.toggleSection("naturalInteraction")}
               style={{ cursor: "pointer" }}
@@ -61,7 +69,11 @@ export default class KeyTechnologies extends React.Component {
               </p>
             )}
           </div>
-          <div>
+          <div style={{
+            maxWidth: '700px',    // 限制最大宽度
+            margin: '0 auto',     // 自动水平居中
+            textAlign: 'justify', // 两端对齐
+          }}>
             <b
               onClick={() => this.toggleSection("usageGuidance")}
               style={{ cursor: "pointer" }}
