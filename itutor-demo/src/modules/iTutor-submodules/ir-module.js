@@ -38,7 +38,7 @@ export default class InformationRetrievalModule extends React.Component {
         ),
         "voice-recognition": (
           <div>
-            iTutor uses voice recognition to convert the user's voice input to
+            AgeMate uses voice recognition to convert the user's voice input to
             text. However, we do not include a separate module for this task, as
             it is readily available through mobile OS's APIs.
           </div>
@@ -70,7 +70,7 @@ export default class InformationRetrievalModule extends React.Component {
         ),
         "voice-recognition": (
           <div>
-            iTutor 使用语音识别将用户的语音输入转换为文本。
+            AgeMate 使用语音识别将用户的语音输入转换为文本。
             但是，由于当前各操作系统中均包含语音输入API，因此，我们不会为此任务提供单独的模块，可以直接调用现有接口实现。
           </div>
         ),

@@ -125,7 +125,7 @@ export default class KeyTechnologies extends React.Component {
               </p>
             )}
           </div>
-          这些关键技术帮助我们更好的分析老年人的实时动态，并对此做出更加智能的反应。它们作为我们独特的关键技术，是AgeMate可以出色运行的重要手段
+          这些关键技术帮助我们更好的分析老年人的实时动态，并对此做出更加智能的反应。它们作为我们独特的关键技术，是AgeMate可以出色运行的重要手段。
         </div>
       ),
     };

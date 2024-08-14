@@ -20,7 +20,7 @@ export default class InformationRetrievalModule extends React.Component {
           explaination: (
             <div>
               <Paragraph>
-                Tutorial Generation is where iTutor interacts with elders. We
+                Tutorial Generation is where AgeMate interacts with elders. We
                 designed a Natural User Interface (NUI) to align with the
                 cognitive patterns of the elders, making it easier for them to
                 use the device.
@@ -36,7 +36,7 @@ export default class InformationRetrievalModule extends React.Component {
                 twoToneColor="#F3470D"
                 style={{ fontSize: "20px" }}
               />{" "}
-              iTutor is still under development.
+              AgeMate is still under development.
             </div>
           ),
           plan: (
@@ -45,7 +45,7 @@ export default class InformationRetrievalModule extends React.Component {
                 We plan to recruit several participants (age {">"} 60) who are
                 unfamiliar with smartphone usage to participate in our study. We
                 will instruct the participants to perform the following tasks
-                using iTutor: making taxi calls, using navigation, mobile
+                using AgeMate: making taxi calls, using navigation, mobile
                 payments, and phone calls.
               </Paragraph>
             </div>
@@ -65,7 +65,7 @@ export default class InformationRetrievalModule extends React.Component {
           explaination: (
             <div>
               <Paragraph>
-                这一部分是iTutor与长辈用户群体交互的触点。
+                这一部分是AgeMate与长辈用户群体交互的触点。
                 我们设计了自然用户界面（NUI）以尽可能匹配老年人的认知模式，使他们更容易使用手机等设备。
               </Paragraph>
             </div>
@@ -79,14 +79,14 @@ export default class InformationRetrievalModule extends React.Component {
                 twoToneColor="#F3470D"
                 style={{ fontSize: "20px" }}
               />
-              iTutor系统仍在开发，我们将在开发完成后进行用户实验。
+              AgeMate系统仍在开发，我们将在开发完成后进行用户实验。
             </div>
           ),
           plan: (
             <div>
               <Paragraph>
                 我们计划招募若干不熟悉智能手机使用的参与者（年龄 {">"} 60
-                岁）来参与我们的研究。 我们将指导参与者使用 iTutor
+                岁）来参与我们的研究。 我们将指导参与者使用 AgeMate
                 执行以下任务：叫车、导航、电子支付和打电话。
               </Paragraph>
             </div>

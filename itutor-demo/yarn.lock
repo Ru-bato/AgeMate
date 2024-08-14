@@ -1169,6 +1169,13 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+  version "7.25.0"
+  resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.25.0.tgz#3af9a91c1b739c569d5d80cc917280919c544ecb"
+  integrity sha512-7dRy4DwXwtzBrPbZflqxnvfxLF8kdZXPkhymtDeFoFqE6ldzjQFgYTtYIFARcLEYDrqfBfYcZt1WqFxRoyC9Rw==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/template@^7.22.5", "@babel/template@^7.3.3":
   version "7.22.5"
   resolved "https://registry.npmmirror.com/@babel/template/-/template-7.22.5.tgz#0c8c4d944509875849bd0344ff0050756eefc6ec"
@@ -4128,6 +4135,14 @@ dom-converter@^0.2.0:
   dependencies:
     utila "~0.4"
 
+dom-helpers@^5.0.1:
+  version "5.2.1"
+  resolved "https://registry.npmmirror.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^3.0.2"
+
 dom-serializer@0:
   version "0.2.2"
   resolved "https://registry.npmmirror.com/dom-serializer/-/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
@@ -5011,6 +5026,13 @@ fraction.js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmmirror.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
+
+framer-motion@^11.3.24:
+  version "11.3.24"
+  resolved "https://registry.npmmirror.com/framer-motion/-/framer-motion-11.3.24.tgz#c4c62b18be7c09814e809b4c9dca5b23a748b1b4"
+  integrity sha512-kl0YI7HwAtyV0VOAWuU/rXoOS8+z5qSkMN6rZS+a9oe6fIha6SC3vjJN6u/hBpvjrg5MQNdSnqnjYxm0WYTX9g==
+  dependencies:
+    tslib "^2.4.0"
 
 fresh@0.5.2:
   version "0.5.2"
@@ -6693,6 +6715,11 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.npmmirror.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmmirror.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
+
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmmirror.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
@@ -8207,7 +8234,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.0.0, prop-types@^15.8.1:
+prop-types@^15.0.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmmirror.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -8835,6 +8862,14 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-scroll@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.npmmirror.com/react-scroll/-/react-scroll-1.9.0.tgz#2984006e184afd0e4018f837d127edf5fa8f152c"
+  integrity sha512-mamNcaX9Ng+JeSbBu97nWwRhYvL2oba+xR2GxvyXsbDeGP+gkYIKZ+aDMMj/n20TbV9SCWm/H7nyuNTSiXA6yA==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.7.2"
+
 react-textarea-autosize@^8.3.2:
   version "8.5.2"
   resolved "https://registry.npmmirror.com/react-textarea-autosize/-/react-textarea-autosize-8.5.2.tgz#6421df2b5b50b9ca8c5e96fd31be688ea7fa2f9d"
@@ -8843,6 +8878,16 @@ react-textarea-autosize@^8.3.2:
     "@babel/runtime" "^7.20.13"
     use-composed-ref "^1.3.0"
     use-latest "^1.2.1"
+
+react-transition-group@^4.4.5:
+  version "4.4.5"
+  resolved "https://registry.npmmirror.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"
+  integrity sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
 
 react@^18.2.0:
   version "18.2.0"
@@ -8918,6 +8963,11 @@ regenerator-runtime@^0.13.11, regenerator-runtime@^0.13.9:
   version "0.13.11"
   resolved "https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
+  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
 
 regenerator-transform@^0.15.1:
   version "0.15.1"
@@ -9991,6 +10041,11 @@ tslib@^2.0.3:
   version "2.6.1"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.6.1.tgz#fd8c9a0ff42590b25703c0acb3de3d3f4ede0410"
   integrity sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==
+
+tslib@^2.4.0:
+  version "2.6.3"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.6.3.tgz#0438f810ad7a9edcde7a241c3d80db693c8cbfe0"
+  integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
 
 tsutils@^3.21.0:
   version "3.21.0"

@@ -2,6 +2,8 @@ import React from "react";
 import step_pic from "../assets/step.png";
 import { Typography } from "antd";
 import { Layout, Image } from "antd";
+import appagent_demo from "../assets/AppAgent-TieTie-demo.mp4";
+import agemate_demo from "../assets/AgeMate-demo.mp4";
 const { Title, Paragraph } = Typography;
 const { Content } = Layout;
 
@@ -25,6 +27,31 @@ export default class InformationRetrievalModule extends React.Component {
       ),
     };
 
+    const CONTENT_1 = {
+      english: (
+        <div>
+          AgeMate teaches seniors how to open the eBook of
+          <i>Romance of the Three Kingdoms</i>.
+        </div>
+      ),
+      chinese: <div>AgeMate教老年人打开《三国演义》电子书</div>,
+    };
+
+    const CONTENT_2 = {
+      english: <div>AgeMate teaches seniors how to use APP.</div>,
+      chinese: <div>AgeMate教老年人使用APP</div>,
+    };
+
+    const CONTENT_3 = {
+      english: (
+        <div>
+          AppAgent simulates a user posting a Moment on 
+          <i>TieTie</i>.
+        </div>
+      ),
+      chinese: <div>AppAgent模拟用户在贴贴TieTie上发布贴贴</div>,
+    };
+
     return (
       <div id="step-demo">
         <Content style={{ padding: "10px 10px 10px 10px" }}>
@@ -34,6 +61,10 @@ export default class InformationRetrievalModule extends React.Component {
           >
             <b>Demo</b>
           </Title>
+
+          <Paragraph style={{ fontSize: "16px" }}>
+            {CONTENT[this.props.language]}
+          </Paragraph>
 
           <Image
             src={step_pic}
@@ -46,8 +77,43 @@ export default class InformationRetrievalModule extends React.Component {
             preview={false}
           />
 
-          <Paragraph style={{ fontSize: "16px" }}>
-            {CONTENT[this.props.language]}
+          <Paragraph style={{ fontSize: "16px", textAlign: "center", marginBottom: "60px"}}>
+            {CONTENT_1[this.props.language]}
+          </Paragraph>
+
+          <video
+            src={agemate_demo}
+            alt="agemate_demo"
+            style={{
+              width: "98%",
+              height: "auto",
+              display: "block",
+              margin: "auto",
+            }}
+            autoPlay
+            loop
+            muted
+          />
+
+          <Paragraph style={{ fontSize: "16px", textAlign: "center", marginBottom: "60px"}}>
+            {CONTENT_2[this.props.language]}
+          </Paragraph>
+
+          <video
+            src={appagent_demo}
+            alt="appagent_demo"
+            style={{
+              width: "98%",
+              height: "auto",
+              margin: "auto",
+            }}
+            autoPlay
+            loop
+            muted
+          />
+
+          <Paragraph style={{ fontSize: "16px", textAlign: "center", marginBottom: "0px"}}>
+            {CONTENT_3[this.props.language]}
           </Paragraph>
         </Content>
       </div>
