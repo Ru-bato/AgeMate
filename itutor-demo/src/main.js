@@ -22,7 +22,7 @@ const { Header, Footer, Content } = Layout;
 
 const defaultData = {
   borderRadius: "8px",
-  colorPrimary: "#7E7ED8",
+  colorPrimary: "#35383d",
   fontFamily:
     "Maven Pro, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'",
   fontFamilyCode: "Maven Pro",
@@ -40,7 +40,18 @@ const defaultHeaderFooterStyle = {
   width: "75%",
   margin: "0 auto",
   height: "auto",
-  background: "#3D4F88",
+  background: "#ffffff",
+  lineHeight: "1",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  padding: "10px 10px 10px 10px",
+};
+const defaultTailFooterStyle = {
+  width: "75%",
+  margin: "0 auto",
+  height: "auto",
+  background: "#99b7e8",
   lineHeight: "1",
   justifyContent: "center",
   alignItems: "center",
@@ -63,8 +74,8 @@ class GlobalLayout extends React.Component {
   render() {
     const content = {
       english:
-        "Elderly Smartphone Assistant Based on Large Models – Sunset Manufacturing Team",
-      chinese: "教老年人学会智能手机，我们最擅长的事！",
+        "Sunset Manufacturing Team",
+      chinese: "夕阳红制造队",
     };
 
     const items = [
@@ -92,19 +103,21 @@ class GlobalLayout extends React.Component {
       >
         <Layout>
           <Header style={defaultHeaderFooterStyle}>
-            <Title level={1} style={{ color: "#ffffff" }}>
+            <Title level={1} style={{ color: "#000000" }}>
               <i>
-                <b>AgeMate</b>
+                <b>AGEMATE: Elderly Smartphone Assistant
+                <br /> 
+                  Based on Large Models</b>
               </i>
             </Title>
-            <Title level={3} style={{ color: "#ffffff" }}>
+            <Title level={3} style={{ color: "#4d89f0" }}>
               {content[this.state.language]}
               <br />
             </Title>
             <Title
               level={5}
               style={{
-                color: "#ffffff",
+                color: "#0b3275",
                 fontSize: "16px",
                 padding: "0 0 10px 0",
               }}
@@ -181,8 +194,8 @@ class GlobalLayout extends React.Component {
             <Explanation language={this.state.language} />
           </Content>
 
-          <Footer style={defaultHeaderFooterStyle}>
-            <Paragraph style={{ color: "#ffffff" }}>
+          <Footer style={defaultTailFooterStyle}>
+            <Paragraph style={{ color: "#000000" }}>
               Created by <b>Sunset Manufacturing Team</b> ©2024 with{" "}
               <a
                 href="https://ant.design/"
@@ -192,7 +205,7 @@ class GlobalLayout extends React.Component {
                 Ant Design
               </a>
             </Paragraph>
-            <Text style={{ color: "#ffffff" }}>
+            <Text style={{ color: "#000000" }}>
               Special thanks to <b>Haotian Zhang</b> for his significant
               participation and contribution to this project.
             </Text>

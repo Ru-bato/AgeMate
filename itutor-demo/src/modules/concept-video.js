@@ -10,12 +10,11 @@ export default class ConceptVideo extends React.Component {
     const CONTENT = {
       english: (
         <div>
-          For a more immersive understanding, please view our demo video
-          showcasing AgeMate's capabilities.
+          Here's our concept video: Teaching Seniors about smartphones, the thing we do best!
         </div>
       ),
       chinese: (
-        <div>"这是我们的DEMO视频，如果你想更加深入地了解我们，来看吧！"</div>
+        <div>这是我们的概念视频：教老年人学会智能手机，我们最擅长的事！</div>
       ),
     };
 
