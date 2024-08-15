@@ -78,7 +78,11 @@ export default class TechnicalImplementation extends React.Component {
         </div>
       ),
       chinese: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           我们将总体架构分为了四层：系统服务层、软件服务层、交互技术层与交互应用层。我们通过四层的架构满足核心功能，也就是：
           <p></p>
           <div>

@@ -26,7 +26,11 @@ export default class StepDemo extends React.Component {
         </div>
       ),
       chinese: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           欢迎来到AgeMate！
           AgeMate是一款基于当今社会老龄化程度加大、数字鸿沟问题显著的社会背景，
           响应国家互联网应用适老化改造的政策支持，从而打造的专门为老年人群提供智能手机助手服务的应用程序。

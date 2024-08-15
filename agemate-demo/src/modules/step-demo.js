@@ -25,7 +25,11 @@ export default class InformationRetrievalModule extends React.Component {
         </div>
       ),
       chinese: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           方便的操作，智能的互动！老年人快速上手的互动教学软件。我们通过大模型与前端的巧妙融合，老年人可以按照屏幕上的指示一步一步的完成自己的使用需求。循环往复，直至他们真正学会软件的使用。
         </div>
       ),

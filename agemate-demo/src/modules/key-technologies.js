@@ -22,14 +22,14 @@ export default class KeyTechnologies extends React.Component {
   render() {
     const CONTENT = {
       english: (
-        <div>
-          <div
+        <div
             style={{
               maxWidth: "700px", // 限制最大宽度
               margin: "0 auto", // 自动水平居中
               textAlign: "justify", // 两端对齐
             }}
           >
+          <div>
             <b
               onClick={() => this.toggleSection("voiceInteraction")}
               style={{ cursor: "pointer" }}
@@ -47,13 +47,7 @@ export default class KeyTechnologies extends React.Component {
               </p>
             )}
           </div>
-          <div
-            style={{
-              maxWidth: "700px", // 限制最大宽度
-              margin: "0 auto", // 自动水平居中
-              textAlign: "justify", // 两端对齐
-            }}
-          >
+          <div>
             <b
               onClick={() => this.toggleSection("naturalInteraction")}
               style={{ cursor: "pointer" }}
@@ -70,13 +64,7 @@ export default class KeyTechnologies extends React.Component {
               </p>
             )}
           </div>
-          <div
-            style={{
-              maxWidth: "700px", // 限制最大宽度
-              margin: "0 auto", // 自动水平居中
-              textAlign: "justify", // 两端对齐
-            }}
-          >
+          <div>
             <b
               onClick={() => this.toggleSection("usageGuidance")}
               style={{ cursor: "pointer" }}
@@ -94,10 +82,15 @@ export default class KeyTechnologies extends React.Component {
               </p>
             )}
           </div>
+          These key technologies help us to better analyse the real-time dynamics of older people and react more intelligently to them. They serve as our unique key technologies and are essential for AgeMate to work well.
         </div>
       ),
       chinese: (
-        <div>
+        <div style={{
+          maxWidth: '700px',    // 限制最大宽度
+          margin: '0 auto',     // 自动水平居中
+          textAlign: 'justify', // 两端对齐
+        }}>
           <div>
             <b
               onClick={() => this.toggleSection("voiceInteraction")}
