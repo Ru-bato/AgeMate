@@ -1,5 +1,4 @@
 import React from "react";
-// import step_pic from "../assets/step.png";
 import { Typography } from "antd";
 import { Layout, Image } from "antd";
 const { Title, Paragraph } = Typography;
@@ -9,39 +8,51 @@ export default class Showcase extends React.Component {
   render() {
     const CONTENT_1 = {
       english: (
-        <div style={{
-          maxWidth: '700px',    // 限制最大宽度
-          margin: '0 auto',     // 自动水平居中
-          textAlign: 'justify', // 两端对齐
-        }}>
+        <div
+          style={{
+            maxWidth: "700px", // 限制最大宽度
+            margin: "0 auto", // 自动水平居中
+            textAlign: "justify", // 两端对齐
+          }}
+        >
           Dynamic Adjustment: AgeMate observes seniors' facial expressions and
           inquires about confusion, adjusting tutorials accordingly.
         </div>
       ),
       chinese: (
-        <div>
+        <div
+          style={{
+            maxWidth: "700px", // 限制最大宽度
+            margin: "0 auto", // 自动水平居中
+            textAlign: "justify", // 两端对齐
+          }}
+        >
           通过摄像头权限观察老年人面部表情以及神态上面的变化，我们的软件可以提问用户是否有困惑以及不解。
         </div>
       ),
     };
     const CONTENT_2 = {
       english: (
-        <div style={{
-          maxWidth: '700px',    // 限制最大宽度
-          margin: '0 auto',     // 自动水平居中
-          textAlign: 'justify', // 两端对齐
-        }}>
+        <div
+          style={{
+            maxWidth: "700px", // 限制最大宽度
+            margin: "0 auto", // 自动水平居中
+            textAlign: "justify", // 两端对齐
+          }}
+        >
           Upon understanding seniors' needs, AgeMate swiftly generates tailored
           guides, using cartoonish voices to guide them through smartphone
           operations step-by-step.
         </div>
       ),
       chinese: (
-        <div style={{
-          maxWidth: '700px',    // 限制最大宽度
-          margin: '0 auto',     // 自动水平居中
-          textAlign: 'justify', // 两端对齐
-        }}>
+        <div
+          style={{
+            maxWidth: "700px", // 限制最大宽度
+            margin: "0 auto", // 自动水平居中
+            textAlign: "justify", // 两端对齐
+          }}
+        >
           通过了解老年人的需求之后，AgeMate可以快速地做出对策，并生成指南。我们用卡通的形象语音引导老年人一步一步的学习手机软件操作使用。
         </div>
       ),

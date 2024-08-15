@@ -72,11 +72,38 @@ class GlobalLayout extends React.Component {
   };
 
   render() {
+    const TITLE = {
+      english: (
+        <div>
+          AGEMATE: Elderly Smartphone Assistant
+          <br />
+          Based on Large Models
+        </div>
+      ),
+      chinese: <div>AGEMATE: 基于大模型的老年人手机助手</div>,
+    };
+
     const content = {
       english: "Sunset Manufacturing Team",
       chinese: "夕阳红制造队",
     };
 
+    const INFO = {
+      english: (
+        <div>
+          Liangliang Chan, Yongzhen Mu, Xiyan Huang, Ruogu Lang
+          <br />
+          Tongji University, Shanghai, China
+        </div>
+      ),
+      chinese: (
+        <div>
+          陈靓靓，牟泳祯，黄熙雁，郎若谷
+          <br />
+          同济大学，上海，中国
+        </div>
+      ),
+    };
     const items = [
       {
         key: "1",
@@ -112,7 +139,12 @@ class GlobalLayout extends React.Component {
               <video
                 src={age_logo}
                 alt="Logo"
-                style={{ width: "100px", height: "190px" , marginRight: "15px", marginLeft: "-60px"}}
+                style={{
+                  width: "100px",
+                  height: "190px",
+                  marginRight: "15px",
+                  marginLeft: "-60px",
+                }}
                 autoPlay
                 loop
                 muted
@@ -120,11 +152,12 @@ class GlobalLayout extends React.Component {
               <div>
                 <Title level={1} style={{ color: "#000000" }}>
                   <i>
-                    <b>
+                    {/* <b>
                       AGEMATE: Elderly Smartphone Assistant
                       <br />
                       Based on Large Models
-                    </b>
+                    </b> */}
+                    {TITLE[this.state.language]}
                   </i>
                 </Title>
               </div>
@@ -141,9 +174,10 @@ class GlobalLayout extends React.Component {
                 padding: "0 0 10px 0",
               }}
             >
-              Liangliang Chan, Yongzhen Mu, Xiyan Huang, Ruogu Lang
+              {/* Liangliang Chan, Yongzhen Mu, Xiyan Huang, Ruogu Lang
               <br />
-              Tongji University, Shanghai, China
+              Tongji University, Shanghai, China */}
+              {INFO[this.state.language]}
             </Title>
             <Paragraph>
               <Dropdown
@@ -190,6 +224,7 @@ class GlobalLayout extends React.Component {
               rel="noopener noreferrer"
             >
               <LinkOutlined />
+              {/* {this.state.language === "english" ? "Demo" : "演示"} */}
               Demo
             </Button>
             <br />

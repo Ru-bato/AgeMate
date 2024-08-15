@@ -21,13 +21,7 @@ export default class ConceptVideo extends React.Component {
     return (
       <div>
         <Content style={{ padding: "10px 10px 10px 10px" }}>
-          {/* <Title
-            level={3}
-            style={{ textAlign: "center", justifyContent: "center" }}
-          >
-            <b>Demo Video</b>
-          </Title> */}
-
+          
           <Row
             style={{
               width: "60%",

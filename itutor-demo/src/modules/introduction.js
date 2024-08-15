@@ -44,23 +44,13 @@ export default class StepDemo extends React.Component {
             level={3}
             style={{ textAlign: "center", justifyContent: "center" }}
           >
+            {/* <b>{this.props.language === "english" ? "Abstract" : "摘要"}</b> */}
             <b>Abstract</b>
           </Title>
 
           <Paragraph style={{ fontSize: "16px" }}>
             {CONTENT[this.props.language]}
           </Paragraph>
-
-          {/* <Image
-            src={teaser_pic}
-            style={{
-              width: "98%",
-              height: "auto",
-              display: "block",
-              margin: "auto",
-            }}
-            preview={false}
-          /> */}
         </Content>
       </div>
     );

@@ -46,8 +46,6 @@ export default class TechnicalImplementation extends React.Component {
                 speech to guide them through smartphone operations.
               </p>
             )}
-            {/* </div> */}
-            {/* <div> */}
             <b
               onClick={() => this.toggleSection("naturalInteraction")}
               style={{ cursor: "pointer" }}
@@ -61,8 +59,6 @@ export default class TechnicalImplementation extends React.Component {
                 through the camera to analyze their psychological state.
               </p>
             )}
-            {/* </div> */}
-            {/* <div> */}
             <b
               onClick={() => this.toggleSection("usageGuidance")}
               style={{ cursor: "pointer" }}
@@ -98,8 +94,6 @@ export default class TechnicalImplementation extends React.Component {
                 老年人通过语音输入自身需求，AgeMate分析语音并指引老人操作智能手机。
               </p>
             )}
-            {/* </div> */}
-            {/* <div> */}
             <b
               onClick={() => this.toggleSection("naturalInteraction")}
               style={{ cursor: "pointer" }}
@@ -110,8 +104,6 @@ export default class TechnicalImplementation extends React.Component {
             {this.state.expandedSections.naturalInteraction && (
               <p>AgeMate通过摄像头获取用户表情和延伸数据，分析其心理状态。</p>
             )}
-            {/* </div> */}
-            {/* <div> */}
             <b
               onClick={() => this.toggleSection("usageGuidance")}
               style={{ cursor: "pointer" }}
