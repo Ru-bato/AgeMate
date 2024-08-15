@@ -1,5 +1,6 @@
 import React from "react";
 import arch_pic from "../assets/arch.png";
+import emojy_pic from "../assets/emojy.png";
 import { Typography, Button } from "antd";
 import { Layout, Image } from "antd";
 
@@ -42,8 +43,9 @@ export default class TechnicalImplementation extends React.Component {
             </b>
             {this.state.expandedSections.voiceInteraction && (
               <p>
-                Seniors input their needs via voice, and AgeMate analyzes the
-                speech to guide them through smartphone operations.
+                Elderly users input their mobile phone usage needs by voice, AgeMate analyses the voice semantically 
+                and extracts commands, and guides the elderly to operate their smartphones through voice prompts and 
+                visual cues in the image of Boo's assistant.
               </p>
             )}
             <b
@@ -95,7 +97,7 @@ export default class TechnicalImplementation extends React.Component {
             </b>
             {this.state.expandedSections.voiceInteraction && (
               <p>
-                老年人通过语音输入自身需求，AgeMate分析语音并指引老人操作智能手机。
+                老年人用户通过语音输入手机使用需求，AgeMate对语音进行语义分析和指令提取，以小布助手的形象，通过语音提示和视觉提示，指引老年人操作智能手机。
               </p>
             )}
             <b
@@ -106,7 +108,19 @@ export default class TechnicalImplementation extends React.Component {
               {this.state.expandedSections.naturalInteraction ? " ▲" : " ▼"}
             </b>
             {this.state.expandedSections.naturalInteraction && (
-              <p>AgeMate通过摄像头获取用户表情和延伸数据，分析其心理状态。</p>
+              <p>AgeMate通过摄像头获取用户表情和延伸数据，分析其心理状态。
+                <br />
+                <Image
+              src={emojy_pic}
+              style={{
+                width: "40%",
+                height: "auto",
+                display: "block",
+                margin: "auto",
+              }}
+              preview={false}
+            />
+              </p>
             )}
             <b
               onClick={() => this.toggleSection("usageGuidance")}
