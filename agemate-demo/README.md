@@ -17,7 +17,7 @@ Demo(<update type>): <a short description, in Chinese or English>
 
 ```shell
 // switch to the working folder
-cd itutor-demo
+cd agemate-demo
 // install all the dependencies
 yarn
 // run the interface
