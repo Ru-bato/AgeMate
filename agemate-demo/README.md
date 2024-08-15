@@ -16,7 +16,7 @@ Demo(<update type>): <a short description, in Chinese or English>
 ## Running the code for development
 
 ```shell
-// switch to the working folder
+// switch to the working folders
 cd agemate-demo
 // install all the dependencies
 yarn

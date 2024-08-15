@@ -1,6 +1,6 @@
 # System
 
-*Note: this system demo doesn't reflect the implementation of the iTutor paper iTutor: A Generative Tutorial System for Teaching the Elders to Use Smartphone Applications for UIST 2023. Instead, this is a stripped-down version only to display the capability of LLMs in the tutorial generation, serving the purpose of showcasing the capability for the competition (C4-HCI 2023) project `老年人智能手机使用“引路人”`.*
+AgeMate: Elderly Smartphone Assistant Based on Large Models. This is a stripped-down version only to display the capability of LLMs in the tutorial generation, serving the purpose of showcasing the capability for the competition (C4-HCI 2024) project `基于大模型的老年人手机助手`.*
 
 ## How to run the system demo
 
@@ -18,5 +18,5 @@
 
 
 
-**Additional information**: We apologize for the untidiness in the code. We will try and fix the problem with more development into the iTutor system. Besides, all your responses are generated with AI from a third-party service. We cannot ensure the quality and reliability of the generated content and do not expect to hold any responsibility for any results generated that might be inaccurate or biased. We assume no responsibility for any consequences arising from using this content.
+**Additional information**: We apologize for the untidiness in the code. We will try and fix the problem with more development into the AgeMate system. Besides, all your responses are generated with AI from a third-party service. We cannot ensure the quality and reliability of the generated content and do not expect to hold any responsibility for any results generated that might be inaccurate or biased. We assume no responsibility for any consequences arising from using this content.
 
